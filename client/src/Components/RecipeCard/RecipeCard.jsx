@@ -3,23 +3,18 @@ import { Link } from "react-router-dom";
 
 const RecipeCard = ({ name, typeofdiets, image, healthScore, id }) => {
   return (
-    <div className={style.container_recipecard}>
-      {/* <h1>soy el componente RecipeCard</h1> */}
-      {/* <p>{id}</p> */}
-      <Link className={style.link} to={`/detail/${id}`}>
-        {/* <p>{id}</p> */}
+    <div className={style.recipecard_container}>
+      <Link className={style.recipecard_link} to={`/detail/${id}`}>
         <img
-          className={style.image_card}
+          className={style.recipecard_img}
           src={image === "" ? "https://cutt.ly/b2FeLSa" : image}
           alt={name}
         />
-        <p className={style.text_color}>Name: {name}</p>
-        <p className={style.text_color}>
+        <p className={style.recipecard_text}>Name: {name}</p>
+        <p className={style.recipecard_text}>
           Type of Diets: {typeofdiets.join(", ")}
         </p>
-        <p className={style.text_color}>Health Score: {healthScore}</p>
-        {/* {console.log(id)}
-        {console.log(typeof id)} */}
+        <p className={style.recipecard_text}>Health Score: {healthScore}</p>
       </Link>
     </div>
   );

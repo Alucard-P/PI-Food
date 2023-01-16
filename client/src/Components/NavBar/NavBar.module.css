@@ -1,46 +1,37 @@
-.prueba {
+.NavBar_container {
   background-color: rgb(110, 128, 221);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   height: 10vh;
-  /* align-content: center; */
   align-items: center;
-  /* align-self: center; */
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 999;
 }
-.image {
+.NavBar_img {
   height: 4em;
 }
 
-.navBar_button {
+.NavBar_button {
   font-size: 20px;
   padding: 16px;
   border-radius: 15px;
-  /* border: 1px green solid; */
   color: rgb(219, 218, 215);
   background-color: rgb(40, 40, 36);
   transition: 0.3s;
   border: none;
 }
 
-.navBar_button:hover {
-  font-size: 20px;
-  padding: 16px;
-  border-radius: 15px;
-  /* border: 1px green solid; */
-  color: rgb(219, 218, 215);
+.NavBar_button:hover {
   background-color: rgb(145, 127, 34);
   scale: 1.2;
 }
 
-.space {
+.NavBar_buttons {
   display: flex;
   justify-content: space-around;
   align-self: center;
-  /* background-color: rgba(50, 50, 74, 0.235); */
   width: 20%;
 }

@@ -27,15 +27,18 @@ const Pagination = ({ page, setPage, max, paginado }) => {
     numberPage.push(i + 1);
   }
   return (
-    <nav className={style.container}>
-      {/* <h1>soy el componente Pagination</h1> */}
-      <button title="firstPage" onClick={firstPage} className={style.button}>
+    <nav className={style.pagination_container}>
+      <button
+        title="firstPage"
+        onClick={firstPage}
+        className={style.pagination_button}
+      >
         {"<<"}
       </button>
       <button
         title="previusPage"
         onClick={previusPage}
-        className={style.button}
+        className={style.pagination_button}
         disabled={page === 1 || page < 1}
       >
         {"<"}
@@ -48,19 +51,22 @@ const Pagination = ({ page, setPage, max, paginado }) => {
               className={index === page - 1 ? style.active : style.disable_li}
             >
               <a onClick={() => paginado(e)}>{e}</a>
-              {/* <button onClick={() => paginado(e)}>{e}</button> */}
             </li>
           ))}
       </ul>
       <button
         title="nextPage"
         onClick={nextPage}
-        className={style.button}
+        className={style.pagination_button}
         disabled={page === max}
       >
         {">"}
       </button>
-      <button title="lastPage" onClick={lastPage} className={style.button}>
+      <button
+        title="lastPage"
+        onClick={lastPage}
+        className={style.pagination_button}
+      >
         {">>"}
       </button>
     </nav>

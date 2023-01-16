@@ -1,26 +1,23 @@
-.container {
+.pagination_container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  /* flex-direction: row; */
 }
 
-.button {
+.pagination_button {
   background-color: rgb(40, 40, 36);
   color: rgb(219, 218, 215);
   font-size: 2em;
   border: none;
-  /* padding: 10px; */
   border-radius: 25px;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.button:hover {
+.pagination_button:hover {
   background-color: rgb(145, 127, 34);
-  color: rgb(219, 218, 215);
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .list_ul {

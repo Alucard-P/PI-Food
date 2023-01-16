@@ -28,7 +28,6 @@ const RecipeContainer = () => {
     <Loading />
   ) : (
     <div className={style.container_all}>
-      {/* <h1>soy el componente RecipeContainer</h1> */}
       <SearchBar />
       <Pagination page={page} setPage={setPage} max={max} paginado={paginado} />
       <div className={style.container}>
@@ -51,7 +50,6 @@ const RecipeContainer = () => {
             })}
         </div>
       </div>
-      {/* <RecipeCard /> */}
     </div>
   );
 };

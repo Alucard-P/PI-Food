@@ -84,14 +84,13 @@ const Create = () => {
       <div className={style.form_create}>
         <div>
           <div>
-            <Link className={style.nose} to="/home">
-              <button className={style.form_back}>Go Back</button>
+            <Link className={style.form_link} to="/home">
+              <button className={style.form_home}>Go Back</button>
             </Link>
           </div>
           <h2>Create your recipe</h2>
           <form className={style.form_document} onSubmit={(e) => onSubmit(e)}>
-            <div className={style.prob}>
-              {/* <label htmlFor="name">Name: </label> */}
+            <div>
               <input
                 className={style.form_input}
                 type="text"
@@ -103,12 +102,9 @@ const Create = () => {
                 autoComplete="off"
                 placeholder="Must provide a recipe name"
               />
-              {errors.name && <p className={style.error}>{errors.name}</p>}
-              {/* {console.log(diets)}
-              {console.log(recipeData)} */}
+              {errors.name && <p className={style.form_error}>{errors.name}</p>}
 
               <div>
-                {/* <label htmlFor="image">Image: </label> */}
                 <input
                   type="text"
                   value={recipeData.image}
@@ -118,11 +114,12 @@ const Create = () => {
                   onChange={changeInput}
                   placeholder="Must set url image, jpeg,jpg or png"
                 />
-                {errors.image && <p className={style.error}>{errors.image}</p>}
+                {errors.image && (
+                  <p className={style.form_error}>{errors.image}</p>
+                )}
               </div>
             </div>
             <div className={style.prob}>
-              {/* <label htmlFor="healthScore">HealthScore: </label> */}
               <input
                 type="number"
                 value={recipeData.healthScore}
@@ -133,11 +130,10 @@ const Create = () => {
                 onChange={changeInput}
               />
               {errors.healthScore && (
-                <p className={style.error}>{errors.healthScore}</p>
+                <p className={style.form_error}>{errors.healthScore}</p>
               )}
             </div>
             <div>
-              {/* <label htmlFor="summary"> Summary: </label> */}
               <textarea
                 type="text"
                 value={recipeData.summary}
@@ -149,12 +145,11 @@ const Create = () => {
                 placeholder="Must set summary of the recipe"
               />
               {errors.summary && (
-                <p className={style.error}>{errors.summary}</p>
+                <p className={style.form_error}>{errors.summary}</p>
               )}
             </div>
 
             <div>
-              {/* <label htmlFor="stepByStep">Steps: </label> */}
               <textarea
                 type="text"
                 value={recipeData.stepByStep}
@@ -183,7 +178,7 @@ const Create = () => {
                   ))}
                 </select>
                 {errors.typeofdiets && (
-                  <p className={style.error}>{errors.typeofdiets}</p>
+                  <p className={style.form_error}>{errors.typeofdiets}</p>
                 )}
               </div>
               <div className={style.form_option_button}>
