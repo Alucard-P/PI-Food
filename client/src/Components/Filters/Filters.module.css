@@ -1,0 +1,70 @@
+.container_filter {
+  width: 20%;
+  height: 55%;
+  display: flex;
+  /* border: 1px rebeccapurple solid; */
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  color: rgb(219, 218, 215);
+  background-color: rgba(110, 128, 221, 0.8);
+  border-radius: 20px;
+}
+
+.label_title {
+  font-size: 1.5em;
+  /* border: 1px black solid; */
+}
+
+.button_filter {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button_disable {
+  color: rgb(219, 218, 215);
+  background-color: rgb(40, 40, 36);
+  font-size: 1.2em;
+  transition: 0.3s;
+  border-radius: 16px;
+  border: none;
+}
+
+.button_active {
+  color: rgb(219, 218, 215);
+  background-color: rgb(145, 127, 34);
+  font-size: 1.2em;
+  border-radius: 16px;
+}
+
+.button_disable:hover {
+  color: rgb(219, 218, 215);
+  background-color: rgb(145, 127, 34);
+  transform: scale(1.2);
+}
+
+.reset {
+  color: rgb(219, 218, 215);
+  background-color: rgb(40, 40, 36);
+  font-size: 1.4em;
+  transition: 0.3s;
+  padding: 10px 0;
+  margin: 15px;
+  border-radius: 16px;
+  border: none;
+}
+
+.reset:hover {
+  color: rgb(219, 218, 215);
+  background-color: rgb(145, 127, 34);
+  transform: scale(1.2);
+  border-radius: 16px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  /* border: 1px red solid; */
+}

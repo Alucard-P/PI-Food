@@ -1,0 +1,13 @@
+.Loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px blue solid;
+  background-color: rgba(0, 255, 255, 0.418);
+  color: blue;
+  border-radius: 16px;
+}

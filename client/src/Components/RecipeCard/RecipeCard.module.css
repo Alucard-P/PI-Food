@@ -1,0 +1,25 @@
+.link {
+  text-decoration: none;
+}
+
+.container_recipecard {
+  display: flex;
+  width: 25%;
+  /* border: 1px red solid; */
+  justify-content: center;
+  margin: 16px 0;
+  padding: 16px;
+  border-radius: 16px;
+  /* color: rgb(219, 218, 215); */
+  background-color: rgba(40, 40, 36, 0.8);
+}
+
+.image_card {
+  width: 312px;
+  height: 231px;
+}
+
+.text_color {
+  /* color: black; */
+  color: rgb(219, 218, 215);
+}

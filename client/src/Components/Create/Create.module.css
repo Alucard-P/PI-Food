@@ -1,0 +1,174 @@
+.form_container {
+  height: 90vh;
+  /* border: 1px red solid; */
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  /* background-color: rgb(85, 0, 255); */
+  position: absolute;
+  top: 10vh;
+  width: 100%;
+}
+.form_create {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(110, 128, 221, 0.4);
+  border: 1px rgb(128, 0, 255) solid;
+  width: 80%;
+  height: 85%;
+  color: rgb(219, 218, 215);
+}
+
+.form_document {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  width: 100%;
+  border-radius: 0.6rem;
+  color: black;
+  justify-content: center;
+}
+
+.form_img {
+  width: 312px;
+  height: 231px;
+  margin: 20px;
+}
+
+.form_back {
+  border: 1px darkcyan solid;
+  display: flex;
+  justify-content: flex-start;
+  width: 4.5em;
+  font-size: 1.5em;
+  border-radius: 15px;
+  cursor: pointer;
+  color: rgb(219, 218, 215);
+  background-color: rgb(40, 40, 36);
+  transition: 0.3s;
+}
+
+.form_back:hover {
+  color: rgb(219, 218, 215);
+  background-color: rgb(145, 127, 34);
+  cursor: pointer;
+  scale: 1.2;
+}
+
+.nose {
+  text-decoration: none;
+}
+
+.form_submit {
+  display: flex;
+  justify-items: center;
+  align-self: center;
+  font-size: 24px;
+  text-align: center;
+  width: 5em;
+  height: 2.5em;
+  margin: 15px;
+  border-radius: 15px;
+  color: white;
+  background-color: grey;
+  border: none;
+  cursor: not-allowed;
+}
+
+.form_select {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 310px;
+  border: 2px forestgreen solid;
+  margin: 10px;
+  color: rgb(219, 218, 215);
+}
+
+.button_diet {
+  margin: 10px;
+  border-radius: 16px;
+  color: rgb(219, 218, 215);
+  background-color: rgb(212, 188, 69);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.button_diet:hover {
+  margin: 10px;
+  border-radius: 16px;
+  color: rgb(219, 218, 215);
+  background-color: rgb(145, 127, 34);
+  cursor: pointer;
+}
+
+.form_submit_active {
+  display: flex;
+  justify-items: center;
+  align-self: center;
+  font-size: 24px;
+  text-align: center;
+  width: 5em;
+  height: 2.5em;
+  margin: 15px;
+  border-radius: 15px;
+  color: rgb(219, 218, 215);
+  background-color: rgb(195, 135, 16);
+  cursor: pointer;
+}
+
+.form_input {
+  height: 25px;
+  margin: 5px;
+}
+
+.form_input_number {
+  height: 25px;
+  margin: 5px;
+  width: 310px;
+}
+
+.form_input_textarea {
+  height: 15%;
+  margin: 5px;
+  /* width: 310px; */
+}
+
+.form_prob {
+  display: flex;
+  flex-direction: column;
+}
+.error {
+  color: red;
+  font-size: 13px;
+  padding: 1px;
+  border: 1px red solid;
+}
+
+.form_card {
+  /* border: 2px rgb(234, 255, 0) solid; */
+  background-color: rgba(40, 40, 36, 1);
+  border-radius: 16px;
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* flex-flow: column wrap; */
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.form_card_name {
+  width: 85%;
+  /* width: 310px; */
+  display: flex;
+  flex-wrap: wrap;
+  /* border: 1px yellow solid; */
+  /* height: 40px; */
+  margin: 10px;
+}
