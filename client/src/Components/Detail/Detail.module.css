@@ -1,101 +1,82 @@
-.prueba {
+.detail_container_All {
   position: absolute;
   top: 10vh;
+  width: 100vw;
 }
 
 .detail_container {
   display: flex;
   justify-content: space-around;
-  border: 2px red solid;
   padding: 80px;
-  width: 100vw;
-  /* height: 50vh; */
-
-  /* background-color: aquamarine; */
 }
 
 .detail_button {
   color: rgb(219, 218, 215);
-  background-color: rgb(212, 188, 69);
+  background-color: rgb(40, 40, 36);
   border-radius: 15px;
   font-size: 24px;
   border: none;
+  transition: 0.3s;
 }
 
 .detail_button:hover {
   color: rgb(219, 218, 215);
   background-color: rgb(145, 127, 34);
-  border-radius: 15px;
-  font-size: 24px;
+  scale: 1.1;
 }
 
 .detail_recipe {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /* align-content: flex-start; */
   align-items: flex-start;
-  /* align-self: flex-start; */
-  /* padding: 0 10vh; */
   width: 40%;
-  border: 2px red solid;
-  /* overflow: auto; */
   padding: 15px;
   font-size: 20px;
   color: rgb(219, 218, 215);
-  background-color: rgba(110, 128, 221, 0.3);
+  background-color: rgba(40, 40, 36, 0.8);
   border-radius: 24px;
 }
 
-.image_detail {
+.detail_img {
   width: 556px;
   height: 370px;
 }
 
-.text_filtro {
+.detail_text {
   color: rgb(219, 218, 215);
   text-decoration: none;
   text-align: justify;
-  /* display: flex; */
-  /* justify-content: end; */
-  /* width: 40vw; */
   word-break: break-all;
 }
 
-.text_filtro b {
+.detail_text b {
   font-weight: normal;
 }
 
-.text_filtro a:link {
+.detail_text a:link {
   text-decoration: none;
   color: inherit;
   pointer-events: none;
 }
 
-.detail_img {
+.detail_container_img {
   justify-content: center;
   align-self: center;
-  border: 2px green solid;
-  /* padding: 0 10vh; */
 }
 
-.step_container {
-  margin: 10px 5px;
+.detail_container_step {
+  margin: 10px 0px;
   padding: 20px;
-  /* border: 1px red solid; */
-  background-color: rgba(110, 128, 221, 0.3);
+  background-color: rgba(40, 40, 36, 0.8);
   border-radius: 24px;
 }
 
-.detail_step {
-  /* display: flex; */
-  /* align-items: flex-start;
-  justify-content: flex-start;
-  align-content: flex-start;
-  align-self: flex-start; */
+.detail_step_text {
   text-align: left;
   font-size: 20px;
   color: rgb(219, 218, 215);
+  word-break: break-all;
 }
 
 .detail_step_title {

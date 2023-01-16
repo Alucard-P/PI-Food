@@ -1,4 +1,4 @@
-.entorno {
+.lobby_entorno {
   background-image: url("https://images6.alphacoders.com/366/366291.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,24 +10,27 @@
   align-items: center;
 }
 
-.flexbox {
-  /* background-color: rgba(255, 60, 0, 0.572); */
+.lobby_container {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
 }
 
-.color {
+.lobby_text {
   color: beige;
+  font-size: 7em;
 }
 
-.button {
+.lobby_button {
   height: 3em;
   width: 7em;
-  background-color: rgb(62, 141, 26);
+  background-color: rgb(40, 40, 36);
   font-size: 2em;
-  color: blanchedalmond;
-  border-color: blue;
-  border-radius: 50%;
+  color: rgb(219, 218, 215);
+  /* border-color: blue; */
+  border-radius: 24px;
+}
+
+.lobby_button:hover {
+  color: red;
+  background-color: rgb(40, 40, 36);
 }

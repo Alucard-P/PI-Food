@@ -6,8 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 5px blue solid; */
-  background-color: rgba(0, 255, 255, 0.418);
-  color: blue;
+  background-color: rgba(40, 40, 36, 0.8);
   border-radius: 16px;
+  border: none;
 }

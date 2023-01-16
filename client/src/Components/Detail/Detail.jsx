@@ -27,13 +27,12 @@ const Detail = () => {
   return !detail.name ? (
     <Loading />
   ) : (
-    <div className={style.prueba}>
+    <div className={style.detail_container_All}>
       <div className={style.detail_container}>
         <div className={style.detail_recipe}>
           <button className={style.detail_button} onClick={onClick}>
             Go Home
           </button>
-          {console.log(detail)}
           <p>
             <b>Name:</b> {detail.name}
           </p>
@@ -48,31 +47,30 @@ const Detail = () => {
             <b>Summary: </b>
           </span>
           <p
-            className={style.text_filtro}
+            className={style.detail_text}
             dangerouslySetInnerHTML={{ __html: detail.summary }}
           />
         </div>
-        <div className={style.detail_img}>
+        <div className={style.detail_container_img}>
           <img
-            className={style.image_detail}
+            className={style.detail_img}
             src={detail.image ? detail.image : "https://cutt.ly/b2FeLSa"}
             alt={detail.name}
           />
         </div>
       </div>
-      <div className={style.step_container}>
+      <div className={style.detail_container_step}>
         <span className={style.detail_step_title}>
           <b>Steps: </b>
         </span>
         <p
-          className={style.detail_step}
+          className={style.detail_step_text}
           dangerouslySetInnerHTML={{
             __html: detail.stepByStep
               ? detail.stepByStep
               : "This recipe has no preparation steps",
           }}
         />
-        {/* {console.log(detail.stepByStep)} */}
       </div>
     </div>
   );
