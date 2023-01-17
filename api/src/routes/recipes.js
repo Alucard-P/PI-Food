@@ -24,7 +24,6 @@ const getByApi = async () => {
     `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API}&number=100&addRecipeInformation=true`
   );
   const constresult = await constapi.data;
-  // console.log("este es el api.data", constresult.results);
   if (Array.isArray(constresult.results)) {
     const dataApi = await constresult.results.map((info) => {
       return {
@@ -36,7 +35,6 @@ const getByApi = async () => {
         image: info.image,
       };
     });
-    // const dataApi = await api.data;
     return dataApi;
   } else {
     return "no se puede mostrar la api";
@@ -53,27 +51,32 @@ const getByBd = async () => {
       },
     },
   });
+  const filterBd = myBd.map((e) => {
+    return {
+      id: e.id,
+      name: e.name,
+      summary: e.summary,
+      healthScore: e.healthScore,
+      typeofdiets: e.typeofdiets.map((e) => e.name),
+      image: e.image,
+      stepByStep: e.stepByStep,
+    };
+  });
 
-  return myBd;
+  return filterBd;
 };
 
 const getTotal = async () => {
   const apiInfo = await getByApi();
   const apiBd = await getByBd();
-  // console.log("haber el dato", apiBd);
-  // console.log("esta es la api", apiInfo);
   const apiTotal = apiInfo.concat(apiBd);
-  // console.log("esta es la api total", apiTotal);
   return apiTotal;
 };
 
 recipes.get("/", async (req, res) => {
   const { name } = req.query;
   try {
-    // if (!name) throw new Error("No envio el nombre de la receta");
-
     const newRecipes = await getTotal();
-    console.log(name);
     if (name) {
       const nameRecipes = newRecipes.filter((e) =>
         e.name.toLowerCase().includes(name.toLowerCase())
@@ -88,12 +91,6 @@ recipes.get("/", async (req, res) => {
     res.status(404).json(error.message);
   }
 });
-
-// recipes.get("/", async (req, res) => {
-//   const baseTotal = await getTotal();
-
-//   return res.status(200).json(baseTotal);
-// });
 
 recipes.get("/:id", async (req, res) => {
   const { id } = req.params;

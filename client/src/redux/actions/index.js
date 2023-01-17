@@ -1,5 +1,4 @@
 import axios from "axios";
-import swal from "sweetalert";
 
 export const GET_RECIPES = "GET_RECIPES";
 export const SEARCH_RECIPE = "SEARCH_RECIPE";
@@ -18,16 +17,7 @@ export const getRecipes = () => {
   return async function (dispatch) {
     const recipes = await axios.get("http://localhost:3001/recipes");
 
-    const recipeAll = recipes.data.map((recipe) => {
-      const newDiets = [];
-      if (typeof recipe["typeofdiets"][0] === "object") {
-        for (const diet of recipe["typeofdiets"]) {
-          newDiets.push(diet.name);
-        }
-        recipe.typeofdiets = newDiets;
-      }
-      return recipe;
-    });
+    const recipeAll = recipes.data;
 
     return dispatch({ type: GET_RECIPES, payload: recipeAll });
   };
@@ -36,17 +26,7 @@ export const getRecipes = () => {
 export const getDetail = (id) => {
   return async function (dispatch) {
     const detail = await axios.get(`http://localhost:3001/recipes/${id}`);
-
     const detailAll = detail.data;
-
-    if (typeof detailAll["typeofdiets"][0] === "object") {
-      const newArray = [];
-      for (const detailBd of detailAll["typeofdiets"]) {
-        newArray.push(detailBd.name);
-      }
-      detailAll["typeofdiets"] = newArray;
-    }
-
     return dispatch({ type: DETAIL_RECIPE, payload: detailAll });
   };
 };
@@ -66,13 +46,7 @@ export const getRecipe = (name) => {
       );
       return dispatch({ type: SEARCH_RECIPE, payload: recipe.data });
     } catch (error) {
-      swal({
-        title: "Sorry!",
-        text: "the name of the recipe does not exist!",
-        icon: "error",
-        button: "Ok",
-      });
-      // alert("the name of the recipe does not exist");
+      alert("The name of the recipe does not exist");
     }
   };
 };

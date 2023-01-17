@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { getDiets, postRecipe } from "../../redux/actions";
 import { Link, useHistory, NavLink } from "react-router-dom";
 import validation from "./Validation.js";
-import swal from "sweetalert";
 
 const Create = () => {
   const history = useHistory();
@@ -54,13 +53,7 @@ const Create = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     dispatch(postRecipe(recipeData));
-    swal({
-      title: "Congratulations!",
-      text: "Your recipe has been successfully created.",
-      icon: "success",
-      button: "Ok",
-    }).then(() => history.push("/home"));
-    // alert("Recipe Created");
+    alert("Your recipe has been successfully created");
     setRecipeData({
       name: "",
       summary: "",
@@ -69,7 +62,7 @@ const Create = () => {
       stepByStep: "",
       typeofdiets: [],
     });
-    // history.push("/home");
+    history.push("/home");
   };
 
   const filterDiets = (e) => {

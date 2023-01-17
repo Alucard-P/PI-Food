@@ -1,5 +1,4 @@
 import style from "./SearchBar.module.css";
-import swal from "sweetalert";
 import { useDispatch } from "react-redux";
 import { getRecipes, getRecipe } from "../../redux/actions";
 import { useState } from "react";
@@ -20,12 +19,7 @@ const SearchBar = () => {
   const inputSearch = (e) => {
     e.preventDefault();
     if (search === "") {
-      swal({
-        title: "Sorry!",
-        text: "You must write the name of the recipe",
-        icon: "warning",
-        button: "Ok",
-      });
+      alert("You must write the name of the recipe");
       setSearch("");
     } else {
       dispatch(getRecipe(search));
