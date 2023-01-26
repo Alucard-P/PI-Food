@@ -2,8 +2,9 @@ import style from "./Create.module.css";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getDiets, postRecipe } from "../../redux/actions";
-import { Link, useHistory, NavLink } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import validation from "./Validation.js";
+import swal from "sweetalert";
 
 const Create = () => {
   const history = useHistory();
@@ -53,7 +54,12 @@ const Create = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     dispatch(postRecipe(recipeData));
-    alert("Your recipe has been successfully created");
+    swal({
+      title: "Congratulations!",
+      text: "Your recipe has been successfully created",
+      icon: "success",
+      button: "Ok",
+    }).then(() => history.push("/home"));
     setRecipeData({
       name: "",
       summary: "",
@@ -62,11 +68,9 @@ const Create = () => {
       stepByStep: "",
       typeofdiets: [],
     });
-    history.push("/home");
   };
 
   const filterDiets = (e) => {
-    // e.preventDefault();
     setRecipeData({
       ...recipeData,
       typeofdiets: recipeData.typeofdiets.filter((t) => t !== e.target.value),
@@ -217,7 +221,6 @@ const Create = () => {
             >
               Create Recipe
             </button>
-            {console.log(errors)}
           </form>
         </div>
         <div className={style.form_card}>

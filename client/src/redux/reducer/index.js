@@ -70,23 +70,21 @@ const rootReducer = (state = initialState, action) => {
       const sort_name =
         action.payload === "Asce"
           ? state.recipes.sort(function (a, b) {
-              if (a.name > b.name) {
+              if (a.name.toLowerCase() > b.name.toLowerCase()) {
                 return 1;
               }
-              if (a.name < b.name) {
+              if (a.name.toLowerCase() < b.name.toLowerCase()) {
                 return -1;
               }
-              // a must be equal to b
               return 0;
             })
           : state.recipes.sort(function (a, b) {
-              if (a.name > b.name) {
+              if (a.name.toLowerCase() > b.name.toLowerCase()) {
                 return -1;
               }
-              if (a.name < b.name) {
+              if (a.name.toLowerCase() < b.name.toLowerCase()) {
                 return 1;
               }
-              // a must be equal to b
               return 0;
             });
       return { ...state, recipes: sort_name };
@@ -101,7 +99,6 @@ const rootReducer = (state = initialState, action) => {
               if (a.healthScore < b.healthScore) {
                 return -1;
               }
-              // a must be equal to b
               return 0;
             })
           : state.recipes.sort(function (a, b) {
@@ -111,7 +108,6 @@ const rootReducer = (state = initialState, action) => {
               if (a.healthScore < b.healthScore) {
                 return 1;
               }
-              // a must be equal to b
               return 0;
             });
       return { ...state, recipes: sort_score };

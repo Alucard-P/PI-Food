@@ -17,6 +17,7 @@
   margin-left: 16px;
   transition: 0.3s;
   border-radius: 16px;
+  border: none;
 }
 
 .searchBar_button:hover {

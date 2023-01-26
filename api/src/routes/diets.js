@@ -9,22 +9,16 @@ diets.get("/", async (req, res) => {
   const dietsapi = await axios.get(
     `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API}&number=100&addRecipeInformation=true`
   );
-  const newdiet = await dietsapi.data;
-  const probdiet = newdiet.results.flatMap((e) => e.diets);
-  // const dobdiet = probdiet.map((e) => {
-  //   for (let i = 0; i < e.length; i++) {
-  //     return e[i];
-  //   }
-  // });
+  const diets_api_data = await dietsapi.data;
+  const probdiet = diets_api_data.results.flatMap((e) => e.diets);
   probdiet.forEach((e) => {
     Typeofdiet.findOrCreate({
-      where: { name: e.toLowerCase() },
+      where: { name: e },
     });
   });
 
-  const nuevaesp = await Typeofdiet.findAll();
-  // console.log(nuevaesp);
-  res.status(200).send(nuevaesp);
+  const list_diet = await Typeofdiet.findAll();
+  res.status(200).send(list_diet);
 });
 
 module.exports = diets;

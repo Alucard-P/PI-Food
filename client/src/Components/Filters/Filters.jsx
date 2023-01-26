@@ -130,7 +130,7 @@ const Filters = ({ setPage, setOrder }) => {
       <p className={style.label_title}>Select your diet: </p>
       <div className={style.button_filter}>
         <button
-          onClick={(e) => filterDiet(e)}
+          onClick={filterDiet}
           value="All"
           name="All"
           className={diet["All"] ? style.button_active : style.button_disable}
@@ -138,7 +138,7 @@ const Filters = ({ setPage, setOrder }) => {
           All
         </button>
         <button
-          onClick={(e) => filterDiet(e)}
+          onClick={filterDiet}
           value="gluten free"
           name="gluten free"
           className={
@@ -148,7 +148,7 @@ const Filters = ({ setPage, setOrder }) => {
           gluten free
         </button>
         <button
-          onClick={(e) => filterDiet(e)}
+          onClick={filterDiet}
           value="dairy free"
           name="dairy free"
           className={
@@ -158,7 +158,7 @@ const Filters = ({ setPage, setOrder }) => {
           dairy free
         </button>
         <button
-          onClick={(e) => filterDiet(e)}
+          onClick={filterDiet}
           value="lacto ovo vegetarian"
           name="lacto ovo vegetarian"
           className={
@@ -170,7 +170,7 @@ const Filters = ({ setPage, setOrder }) => {
           lacto ovo vegetarian
         </button>
         <button
-          onClick={(e) => filterDiet(e)}
+          onClick={filterDiet}
           value="vegan"
           name="vegan"
           className={diet["vegan"] ? style.button_active : style.button_disable}
@@ -178,7 +178,7 @@ const Filters = ({ setPage, setOrder }) => {
           vegan
         </button>
         <button
-          onClick={(e) => filterDiet(e)}
+          onClick={filterDiet}
           value="paleolithic"
           name="paleolithic"
           className={
@@ -188,7 +188,7 @@ const Filters = ({ setPage, setOrder }) => {
           paleolithic
         </button>
         <button
-          onClick={(e) => filterDiet(e)}
+          onClick={filterDiet}
           value="whole 30"
           name="whole 30"
           className={
@@ -198,7 +198,7 @@ const Filters = ({ setPage, setOrder }) => {
           whole 30
         </button>
         <button
-          onClick={(e) => filterDiet(e)}
+          onClick={filterDiet}
           value="primal"
           name="primal"
           className={
@@ -208,7 +208,7 @@ const Filters = ({ setPage, setOrder }) => {
           primal
         </button>
         <button
-          onClick={(e) => filterDiet(e)}
+          onClick={filterDiet}
           value="pescatarian"
           name="pescatarian"
           className={
@@ -218,7 +218,7 @@ const Filters = ({ setPage, setOrder }) => {
           pescatarian
         </button>
         <button
-          onClick={(e) => filterDiet(e)}
+          onClick={filterDiet}
           value="ketogenic"
           name="ketogenic"
           className={
@@ -228,7 +228,7 @@ const Filters = ({ setPage, setOrder }) => {
           ketogenic
         </button>
         <button
-          onClick={(e) => filterDiet(e)}
+          onClick={filterDiet}
           value="fodmap friendly"
           name="fodmap friendly"
           className={
@@ -242,7 +242,7 @@ const Filters = ({ setPage, setOrder }) => {
       <p className={style.label_title}>Select data: </p>
       <div className={style.button_filter}>
         <button
-          onClick={(e) => filterData(e)}
+          onClick={filterData}
           value="All"
           name="All"
           className={data["All"] ? style.button_active : style.button_disable}
@@ -250,7 +250,7 @@ const Filters = ({ setPage, setOrder }) => {
           All
         </button>
         <button
-          onClick={(e) => filterData(e)}
+          onClick={filterData}
           value="API"
           name="API"
           className={data["API"] ? style.button_active : style.button_disable}
@@ -258,7 +258,7 @@ const Filters = ({ setPage, setOrder }) => {
           API
         </button>
         <button
-          onClick={(e) => filterData(e)}
+          onClick={filterData}
           value="BD"
           name="BD"
           className={data["BD"] ? style.button_active : style.button_disable}
@@ -270,7 +270,7 @@ const Filters = ({ setPage, setOrder }) => {
       <p className={style.label_title}>Select order: </p>
       <div className={style.button_filter}>
         <button
-          onClick={(e) => filterName(e)}
+          onClick={filterName}
           value="Asce"
           name="Asce"
           className={sort["Asce"] ? style.button_active : style.button_disable}
@@ -278,7 +278,7 @@ const Filters = ({ setPage, setOrder }) => {
           A-Z
         </button>
         <button
-          onClick={(e) => filterName(e)}
+          onClick={filterName}
           value="Desc"
           name="Desc"
           className={sort["Desc"] ? style.button_active : style.button_disable}
@@ -286,13 +286,13 @@ const Filters = ({ setPage, setOrder }) => {
           Z-A
         </button>
         <button
-          onClick={(e) => filterScore(e)}
+          onClick={filterScore}
           value="HtSM"
           name="HtSM"
           className={sort["HtSM"] ? style.button_active : style.button_disable}
         >{`HealthScore >`}</button>
         <button
-          onClick={(e) => filterScore(e)}
+          onClick={filterScore}
           value="HtSm"
           name="HtSm"
           className={sort["HtSm"] ? style.button_active : style.button_disable}

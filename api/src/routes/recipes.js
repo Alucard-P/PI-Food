@@ -13,12 +13,6 @@ const recipes = Router();
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 
-// let newAxios = axios.create({
-//   headers: {
-//     "Accept-Encoding": "null",
-//   },
-// });
-
 const getByApi = async () => {
   const constapi = await axios.get(
     `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API}&number=100&addRecipeInformation=true`
@@ -31,7 +25,7 @@ const getByApi = async () => {
         name: info.title,
         summary: info.summary,
         healthScore: info.healthScore,
-        typeofdiets: info.diets.map((e) => e),
+        typeofdiets: info.diets,
         image: info.image,
       };
     });
@@ -94,19 +88,14 @@ recipes.get("/", async (req, res) => {
 
 recipes.get("/:id", async (req, res) => {
   const { id } = req.params;
-  console.log(typeof id);
   try {
     if (!id) throw new Error("No se envio el id necesario");
-
     const outDb = await getTotal();
-
-    const probando = outDb.find((e) => e.id === id);
-
-    if (!probando) {
+    const filterById = outDb.find((e) => e.id === id);
+    if (!filterById) {
       const diet = await axios.get(
         `https://api.spoonacular.com/recipes/${id}/information?apiKey=${API}`
       );
-
       const dietdata = await diet.data;
       if (!dietdata) throw new Error("No existe la receta solicitada");
 
@@ -115,14 +104,13 @@ recipes.get("/:id", async (req, res) => {
         name: dietdata.title,
         summary: dietdata.summary,
         stepByStep: dietdata.instructions,
-        typeofdiets: dietdata.diets.map((e) => e),
+        typeofdiets: dietdata.diets,
         healthScore: dietdata.healthScore,
         image: dietdata.image,
       };
       return res.status(201).send(newDiet);
     }
-    // const objetprob = outDb.find((e) => e.name === id);
-    return res.status(200).send(probando);
+    return res.status(200).send(filterById);
   } catch (error) {
     res.status(404).send(error.message);
   }

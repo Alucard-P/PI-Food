@@ -2,7 +2,6 @@
   width: 20%;
   height: 55%;
   display: flex;
-  /* border: 1px rebeccapurple solid; */
   flex-direction: column;
   align-content: center;
   justify-content: center;
@@ -13,7 +12,6 @@
 
 .label_title {
   font-size: 1.5em;
-  /* border: 1px black solid; */
 }
 
 .button_filter {

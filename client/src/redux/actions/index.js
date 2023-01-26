@@ -1,4 +1,5 @@
 import axios from "axios";
+import swal from "sweetalert";
 
 export const GET_RECIPES = "GET_RECIPES";
 export const SEARCH_RECIPE = "SEARCH_RECIPE";
@@ -25,8 +26,8 @@ export const getRecipes = () => {
 
 export const getDetail = (id) => {
   return async function (dispatch) {
-    const detail = await axios.get(`http://localhost:3001/recipes/${id}`);
-    const detailAll = detail.data;
+    const get_detail = await axios.get(`http://localhost:3001/recipes/${id}`);
+    const detailAll = get_detail.data;
     return dispatch({ type: DETAIL_RECIPE, payload: detailAll });
   };
 };
@@ -46,7 +47,12 @@ export const getRecipe = (name) => {
       );
       return dispatch({ type: SEARCH_RECIPE, payload: recipe.data });
     } catch (error) {
-      alert("The name of the recipe does not exist");
+      swal({
+        title: "Sorry!",
+        text: "The name of the recipe does not exist!",
+        icon: "error",
+        button: "Ok",
+      });
     }
   };
 };
