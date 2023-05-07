@@ -1,4 +1,117 @@
-/* .container {
+/* body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas:
+    "nav     nav     nav     nav     "
+    "search  search  search  search  "
+    "pag     pag     pag     pag     "
+    "sidebar content content content "
+    "sidebar content content content "
+    "sidebar content content content ";
+} */
+
+/* .container_all {
   position: absolute;
   top: 10vh;
 } */
+
+.container_all {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-rows: auto; */
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas:
+    "nav     nav     nav     nav     "
+    "search  search  search  search  "
+    "pag     pag     pag     pag     "
+    "sidebar content content content "
+    "sidebar content content content "
+    "sidebar content content content ";
+  position: absolute;
+  top: 10vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.grid_nav {
+  grid-area: nav;
+}
+
+.grid_search {
+  grid-area: search;
+}
+
+.grid_pag {
+  grid-area: pag;
+}
+
+.grid_sidebar {
+  grid-area: sidebar;
+}
+
+.container_card {
+  grid-area: content;
+  /* width: 70%; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.flex_item {
+  flex: 0 0 33.33%;
+}
+
+@media screen and (max-width: 48em) {
+  .container_all {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      "nav     nav     nav     nav     "
+      "search  search  search  search  "
+      "pag     pag     pag     pag     "
+      "sidebar content content content "
+      "sidebar content content content "
+      "sidebar content content content ";
+  }
+
+  .flex_item {
+    flex: 0 0 50%;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .container_all {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      "nav     nav     nav     nav     "
+      "search  search  search  search  "
+      "pag     pag     pag     pag     "
+      "sidebar sidebar content content "
+      "sidebar sidebar content content "
+      "sidebar sidebar content content ";
+  }
+
+  .flex_item {
+    flex: 0 0 100%;
+  }
+}
+@media screen and (max-width: 30em) {
+  .container_all {
+    top: 20vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "nav     nav     nav     nav     "
+      "search  search  search  search  "
+      "pag     pag     pag     pag     "
+      "sidebar sidebar sidebar sidebar "
+      "content content content content ";
+  }
+}

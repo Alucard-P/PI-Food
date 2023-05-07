@@ -29,7 +29,9 @@ const RecipeContainer = () => {
   ) : (
     <div className={style.container_all}>
       <SearchBar />
+
       <Pagination page={page} setPage={setPage} max={max} paginado={paginado} />
+
       <div className={style.container}>
         <Filters setPage={setPage} setOrder={setOrder} />
 

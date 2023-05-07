@@ -1,14 +1,16 @@
 .NavBar_container {
+  grid-area: nav;
   background-color: rgb(110, 128, 221);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 10vh;
+  /* height: 10vh; */
   align-items: center;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 999;
+  padding: 2vh;
 }
 .NavBar_img {
   height: 4em;
@@ -33,5 +35,20 @@
   display: flex;
   justify-content: space-around;
   align-self: center;
-  width: 20%;
+  /* width: 20%; */
+  gap: 2em;
+  /* padding: 3em; */
+}
+
+@media screen and (max-width: 30em) {
+  .NavBar_img {
+    display: none;
+  }
+
+  .NavBar_buttons {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-end;
+    align-items: center;
+  }
 }
