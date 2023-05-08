@@ -8,6 +8,10 @@
   color: rgb(219, 218, 215);
   background-color: rgba(110, 128, 221, 0.8);
   border-radius: 20px;
+  margin: 2em 2em;
+  padding: 3em;
+  font-size: var(--step--1);
+  min-width: 22em;
 }
 
 .label_title {
@@ -65,4 +69,14 @@
   font-size: 30px;
   font-weight: bold;
   /* border: 1px red solid; */
+}
+
+@media screen and (max-width: 30em) {
+  .container_filter {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
 }
