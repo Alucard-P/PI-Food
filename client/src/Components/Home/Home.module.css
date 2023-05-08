@@ -1,4 +1,87 @@
-/* .container {
+.container_all {
   position: absolute;
   top: 10vh;
-} */
+  display: grid;
+  grid-template-columns: repeat(1, 20em 1fr);
+  overflow: hidden;
+  grid-template-rows: repeat(6, auto);
+  column-gap: 2em;
+  grid-template-areas:
+    "nav     nav "
+    "search  search "
+    "pag     pag    "
+    "sidebar content  "
+    "sidebar content  "
+    "sidebar content ";
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.grid_nav {
+  grid-area: nav;
+  /* soy un nuevo */
+}
+
+.grid_search {
+  grid-area: search;
+}
+
+.grid_pag {
+  grid-area: pag;
+}
+
+.grid_sidebar {
+  grid-area: sidebar;
+}
+
+.container_card {
+  grid-area: content;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-size: var(--step--1);
+  margin: 0 auto;
+}
+
+.flex_item {
+  flex: 0 0 33.333333333%;
+}
+
+@media screen and (max-width: 96em) {
+  .flex_item {
+    flex: 0 0 50%;
+  }
+}
+
+@media screen and (max-width: 64em) {
+  .flex_item {
+    flex: 0 0 100%;
+  }
+}
+@media screen and (max-width: 48em) {
+}
+@media screen and (max-width: 30em) {
+  .container_all {
+    top: 20vh;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(5, auto);
+    justify-content: center;
+    grid-template-areas:
+      "nav     nav     nav     nav     "
+      "search  search  search  search  "
+      "pag     pag     pag     pag     "
+      "sidebar sidebar sidebar sidebar "
+      "content content content content ";
+  }
+
+  .container_card {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
