@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("https://www.teahub.io/photos/full/171-1718121_high-resolution-restaurant-images-hd.jpg");
+  background-image: url("./Images/restaurant-image.jpg");
   background-size: cover;
   /* background-repeat: no-repeat; */
   background-attachment: fixed;

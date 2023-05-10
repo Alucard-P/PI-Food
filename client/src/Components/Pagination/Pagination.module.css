@@ -2,41 +2,64 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  flex-wrap: nowrap;
+  /* margin: 0 auto; */
+  /* gap: 0.5em; */
+  border: 1px red solid;
+  width: 100%;
 }
 
 .pagination_button {
   background-color: rgb(40, 40, 36);
   color: rgb(219, 218, 215);
-  font-size: 2em;
   border: none;
-  border-radius: 25px;
+  border-radius: 1.5em;
   cursor: pointer;
   transition: 0.3s;
+  margin: 0 0.5em;
+  /* border: 1px red solid; */
+  font-size: var(--step-2);
+}
+
+.probando {
+  background-color: aqua;
+  color: blue;
 }
 
 .pagination_button:hover {
   background-color: rgb(145, 127, 34);
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .list_ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1em;
-  gap: 1em;
+  font-size: var(--step-5);
+  justify-content: space-evenly;
+  border: 1px red solid;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0;
 }
 
+.prueba_1 {
+  display: none;
+}
+
+.prueba_2 {
+}
+
+.prueba_3 {
+}
 .disable_li {
   list-style: none;
-  font-size: 2em;
+  /* font-size: 2em; */
   background-color: rgb(40, 40, 36);
-  padding: 0.5em;
+  /* padding: 0.5em; */
   border-radius: 20px;
   cursor: pointer;
   transition: 0.3s;
   color: rgb(219, 218, 215);
+  font-size: var(--step-3);
 }
 
 .disable_li:hover {
@@ -49,9 +72,29 @@
   background-color: rgb(145, 127, 34);
   color: rgb(219, 218, 215);
   list-style: none;
-  font-size: 2em;
-  padding: 0.5em;
+  /* font-size: 2em; */
+  /* padding: 0.5em; */
   border-radius: 20px;
   cursor: pointer;
   transition: 0.3s;
+  font-size: var(--step-3);
+}
+
+.dot {
+  color: white;
+}
+
+@media screen and (max-width: 96em) {
+  .list_ul {
+    display: none;
+  }
+  .prueba_1 {
+    display: flex;
+    font-size: var(--step-5);
+    justify-content: space-evenly;
+    border: 1px red solid;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+  }
 }

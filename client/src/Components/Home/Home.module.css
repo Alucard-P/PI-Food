@@ -22,7 +22,6 @@
 }
 .grid_nav {
   grid-area: nav;
-  /* soy un nuevo */
 }
 
 .grid_search {
@@ -31,6 +30,8 @@
 
 .grid_pag {
   grid-area: pag;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .grid_sidebar {
