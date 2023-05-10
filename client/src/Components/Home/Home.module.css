@@ -1,9 +1,6 @@
 .container_all {
-  position: absolute;
-  top: 10vh;
   display: grid;
   grid-template-columns: repeat(1, 20em 1fr);
-  overflow: hidden;
   grid-template-rows: repeat(6, auto);
   column-gap: 2em;
   grid-template-areas:
@@ -22,6 +19,9 @@
 }
 .grid_nav {
   grid-area: nav;
+  position: sticky;
+  top: -0.15rem;
+  z-index: 999;
 }
 
 .grid_search {
@@ -68,7 +68,7 @@
 }
 @media screen and (max-width: 30em) {
   .container_all {
-    top: 20vh;
+    /* top: 20vh; */
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(5, auto);
     justify-content: center;

@@ -17,14 +17,13 @@
   cursor: pointer;
   transition: 0.3s;
   margin: 0 0.5em;
-  /* border: 1px red solid; */
   font-size: var(--step-2);
 }
 
-.probando {
+/* .probando {
   background-color: aqua;
   color: blue;
-}
+} */
 
 .pagination_button:hover {
   background-color: rgb(145, 127, 34);
@@ -45,11 +44,6 @@
   display: none;
 }
 
-.prueba_2 {
-}
-
-.prueba_3 {
-}
 .disable_li {
   list-style: none;
   /* font-size: 2em; */
@@ -85,16 +79,28 @@
 }
 
 @media screen and (max-width: 96em) {
+  .pagination_button {
+    margin: 0 0.25em;
+  }
+
   .list_ul {
     display: none;
   }
   .prueba_1 {
     display: flex;
-    font-size: var(--step-5);
+    font-size: var(--step-2);
     justify-content: space-evenly;
     border: 1px red solid;
     margin: 0 auto;
     width: 100%;
     padding: 0;
+  }
+
+  .disable_li {
+    font-size: var(--step-2);
+  }
+
+  .active {
+    font-size: var(--step-2);
   }
 }

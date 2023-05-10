@@ -58,8 +58,8 @@ const Pagination = ({ page, setPage, max, paginado }) => {
       <ul className={style.prueba_1}>
         {numberPage &&
           numberPage.map((e, index) => {
-            if (page < 8) {
-              if (e <= 7) {
+            if (page < 7) {
+              if (e <= 6) {
                 return (
                   <button
                     onClick={() => paginado(e)}
@@ -70,7 +70,7 @@ const Pagination = ({ page, setPage, max, paginado }) => {
                     {e}
                   </button>
                 );
-              } else if (e === 8) {
+              } else if (e === 7) {
                 return (
                   <>
                     <span className={style.dot}>...</span>
@@ -88,7 +88,7 @@ const Pagination = ({ page, setPage, max, paginado }) => {
                   </button>
                 );
               }
-            } else if (page >= 8) {
+            } else if (page >= 7) {
               if (e === 1) {
                 return (
                   <button
@@ -106,7 +106,7 @@ const Pagination = ({ page, setPage, max, paginado }) => {
                     <span className={style.dot}>...</span>
                   </>
                 );
-              } else if (e >= 8) {
+              } else if (e >= 7) {
                 return (
                   <button
                     onClick={() => paginado(e)}
