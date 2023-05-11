@@ -3,6 +3,8 @@
   grid-template-columns: repeat(1, 20em 1fr);
   grid-template-rows: repeat(6, auto);
   column-gap: 2em;
+  row-gap: 0.5em;
+  /* overflow: hidden; */
   grid-template-areas:
     "nav     nav "
     "search  search "
@@ -84,5 +86,16 @@
     width: 50%;
     margin: 0 auto;
     padding: 0;
+  }
+
+  .grid_search {
+    width: 80%;
+    margin: 0 auto;
+    /* display: flex;
+    justify-content: center; */
+  }
+  .grid_pag {
+    width: 70%;
+    margin: 0 auto;
   }
 }

@@ -2,12 +2,17 @@
   display: flex;
   justify-content: space-around;
   height: 5vh;
+  width: 60%;
   align-content: center;
   align-self: center;
   align-items: center;
-  margin: 15px 20%;
+  margin: 15px auto;
   border-radius: 15px;
   background-color: rgba(43, 67, 186, 0.8);
+}
+
+input[type="text"] {
+  width: 80%;
 }
 
 .searchBar_button {
@@ -34,4 +39,38 @@
 
 .searchBar_input::placeholder {
   color: rgb(219, 218, 215);
+}
+
+@media screen and (max-width: 64em) {
+  .searchBar_container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .searchBar_container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 30em) {
+  .searchBar_container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input[type="text"] {
+    width: 80%;
+    margin-bottom: 0.5em;
+  }
 }

@@ -32,7 +32,7 @@
   display: flex;
   justify-content: space-around;
   align-self: center;
-  gap: 2em;
+  gap: 1em;
 }
 
 @media screen and (max-width: 30em) {
