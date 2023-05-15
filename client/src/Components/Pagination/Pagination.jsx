@@ -119,6 +119,7 @@ const Pagination = ({ page, setPage, max, paginado }) => {
                 );
               }
             }
+            return null;
           })}
       </ul>
 

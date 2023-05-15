@@ -108,6 +108,7 @@
 @media screen and (max-width: 30em) {
   .pagination_button {
     margin: 0 0.1em;
+    font-size: var(--step-0);
   }
 
   .list_ul {
@@ -119,7 +120,7 @@
     justify-content: space-evenly;
     border: 1px red solid;
     margin: 0 auto;
-    width: 75 %;
+    width: 75%;
     padding: 0;
   }
 
