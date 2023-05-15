@@ -67,6 +67,9 @@
   }
 }
 @media screen and (max-width: 48em) {
+  .container_all {
+    column-gap: 4em;
+  }
 }
 @media screen and (max-width: 30em) {
   .container_all {
@@ -90,13 +93,26 @@
   }
 
   .grid_search {
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
     /* display: flex;
     justify-content: center; */
   }
   .grid_pag {
     width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 20em) {
+  .grid_search {
+    width: 100%;
+    margin: 0 auto;
+    /* display: flex;
+    justify-content: center; */
+  }
+  .grid_pag {
+    width: 100%;
     margin: 0 auto;
   }
 }
