@@ -1,7 +1,7 @@
 .container_all {
   display: grid;
   grid-template-columns: repeat(1, 20em 1fr);
-  grid-template-rows: repeat(6, auto);
+  grid-template-rows: repeat(7, auto);
   column-gap: 2em;
   row-gap: 0.5em;
   /* overflow: hidden; */
@@ -11,7 +11,8 @@
     "pag     pag    "
     "sidebar content  "
     "sidebar content  "
-    "sidebar content ";
+    "sidebar content "
+    "footer  footer";
 }
 
 .container {
@@ -38,6 +39,10 @@
 
 .grid_sidebar {
   grid-area: sidebar;
+}
+
+.grid_footer {
+  grid-area: footer;
 }
 
 .container_card {
@@ -75,7 +80,7 @@
   .container_all {
     /* top: 20vh; */
     grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(6, auto);
     justify-content: center;
     column-gap: 0;
     grid-template-areas:
@@ -83,7 +88,8 @@
       "search  search  search  search  "
       "pag     pag     pag     pag     "
       "sidebar sidebar sidebar sidebar "
-      "content content content content ";
+      "content content content content "
+      "footer  footer  footer  footer  ";
   }
 
   .container_card {
@@ -108,8 +114,6 @@
   .grid_search {
     width: 100%;
     margin: 0 auto;
-    /* display: flex;
-    justify-content: center; */
   }
   .grid_pag {
     width: 100%;

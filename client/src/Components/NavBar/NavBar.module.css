@@ -14,7 +14,7 @@
 }
 
 .NavBar_button {
-  font-size: 20px;
+  font-size: 1em;
   padding: 16px;
   border-radius: 15px;
   color: rgb(219, 218, 215);
@@ -37,7 +37,7 @@
 
 @media screen and (max-width: 30em) {
   .NavBar_container {
-    height: 160px;
+    height: 11.5em;
   }
 
   .NavBar_img {
@@ -49,5 +49,6 @@
     flex-direction: column;
     justify-items: flex-end;
     align-items: center;
+    gap: 0.8em;
   }
 }

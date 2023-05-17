@@ -43,7 +43,6 @@ const Pagination = ({ page, setPage, max, paginado }) => {
       >
         {"<"}
       </button>
-      {/* <ul className={`${style.list_ul} ${style.prueba_1}`}> */}
       <ul className={style.list_ul}>
         {numberPage &&
           numberPage.map((e, index) => (

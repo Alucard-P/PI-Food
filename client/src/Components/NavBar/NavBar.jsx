@@ -10,6 +10,9 @@ const NavBar = () => {
         alt="comida"
       />
       <div className={style.NavBar_buttons}>
+        <NavLink to={"/about"}>
+          <button className={style.NavBar_button}>About Us</button>
+        </NavLink>
         <NavLink to={"/create"}>
           <button className={style.NavBar_button}>Create an recipe</button>
         </NavLink>
