@@ -1,7 +1,23 @@
 .detail_container_All {
-  position: absolute;
-  top: 10vh;
-  width: 100vw;
+  /* width: 100vw; */
+  /* min-height: 100vh; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  row-gap: 2em;
+  grid-template-areas:
+    "nav     nav"
+    "summary image"
+    "step    step"
+    "footer  footer";
+}
+
+.grid_nav {
+  grid-area: nav;
+}
+
+.grid_footer {
+  grid-area: footer;
 }
 
 .detail_container {
@@ -26,21 +42,23 @@
 }
 
 .detail_recipe {
+  grid-area: summary;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
-  width: 40%;
+  width: 90%;
   padding: 15px;
   font-size: 20px;
   color: rgb(219, 218, 215);
   background-color: rgba(40, 40, 36, 0.8);
   border-radius: 24px;
+  margin: 0 auto;
 }
 
 .detail_img {
-  width: 556px;
-  height: 370px;
+  max-width: 90%;
+  height: auto;
 }
 
 .detail_text {
@@ -61,15 +79,19 @@
 }
 
 .detail_container_img {
+  grid-area: image;
   justify-content: center;
   align-self: center;
+  margin: 0 auto;
 }
 
 .detail_container_step {
-  margin: 10px 0px;
+  grid-area: step;
+  margin: 10px auto;
   padding: 20px;
   background-color: rgba(40, 40, 36, 0.8);
   border-radius: 24px;
+  width: 90%;
 }
 
 .detail_step_text {
@@ -82,4 +104,19 @@
 .detail_step_title {
   font-size: 20px;
   color: rgb(219, 218, 215);
+}
+
+@media screen and (max-width: 64em) {
+  .detail_container_All {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    row-gap: 2em;
+    grid-template-areas:
+      "nav    "
+      "image "
+      "summary"
+      "step   "
+      "footer ";
+  }
 }
