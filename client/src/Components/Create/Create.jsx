@@ -5,6 +5,8 @@ import { getDiets, postRecipe } from "../../redux/actions";
 import { Link, useHistory } from "react-router-dom";
 import validation from "./Validation.js";
 import swal from "sweetalert";
+import NavBar from "../NavBar/NavBar";
+import Footer from "../Footer/Footer";
 
 const Create = () => {
   const history = useHistory();
@@ -78,6 +80,9 @@ const Create = () => {
   };
   return (
     <div className={style.form_container}>
+      <div className={style.grid_nav}>
+        <NavBar />
+      </div>
       <div className={style.form_create}>
         <div>
           <div>
@@ -87,41 +92,39 @@ const Create = () => {
           </div>
           <h2>Create your recipe</h2>
           <form className={style.form_document} onSubmit={(e) => onSubmit(e)}>
+            {/* <div className={style.prueba1}> */}
+            <input
+              className={style.form_input}
+              type="text"
+              value={recipeData.name}
+              name="name"
+              maxLength="40"
+              onChange={changeInput}
+              autoComplete="off"
+              placeholder="Must provide a recipe name"
+            />
+            {errors.name && <p className={style.form_error}>{errors.name}</p>}
+
             <div>
               <input
-                className={style.form_input}
                 type="text"
-                value={recipeData.name}
-                size="40"
-                name="name"
-                maxLength="40"
+                value={recipeData.image}
+                className={style.form_input}
+                name="image"
                 onChange={changeInput}
-                autoComplete="off"
-                placeholder="Must provide a recipe name"
+                placeholder="Must set url image, jpeg,jpg or png"
               />
-              {errors.name && <p className={style.form_error}>{errors.name}</p>}
-
-              <div>
-                <input
-                  type="text"
-                  value={recipeData.image}
-                  className={style.form_input}
-                  size="40"
-                  name="image"
-                  onChange={changeInput}
-                  placeholder="Must set url image, jpeg,jpg or png"
-                />
-                {errors.image && (
-                  <p className={style.form_error}>{errors.image}</p>
-                )}
-              </div>
+              {errors.image && (
+                <p className={style.form_error}>{errors.image}</p>
+              )}
             </div>
+            {/* </div> */}
             <div className={style.prob}>
               <input
                 type="number"
                 value={recipeData.healthScore}
                 className={style.form_input_number}
-                size="100"
+                size="40"
                 name="healthScore"
                 placeholder="Must set health Score (0-100)"
                 onChange={changeInput}
@@ -243,6 +246,9 @@ const Create = () => {
             <p>DietsList: {recipeData.typeofdiets.join(", ")}</p>
           </div>
         </div>
+      </div>
+      <div className={style.grid_footer}>
+        <Footer />
       </div>
     </div>
   );
