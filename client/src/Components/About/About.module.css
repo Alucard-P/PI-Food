@@ -17,7 +17,7 @@
   padding: 16px;
   border-radius: 15px;
   color: rgb(219, 218, 215);
-  background-color: rgb(40, 40, 36);
+  background-color: rgb(40, 100, 136);
   transition: 0.3s;
   border: none;
 }
@@ -37,6 +37,7 @@
 .grid_about {
   grid-area: about;
   background-color: rgba(110, 128, 221, 0.4);
+
   width: 80%;
   margin: 2em auto;
   display: flex;
@@ -51,7 +52,8 @@
 }
 
 .background {
-  background-color: #151197;
+  /* background-color: #151197; */
+  background-color: rgba(40, 40, 36, 1);
   width: 90%;
   margin: 0 auto;
   padding: 1em;

@@ -1,0 +1,53 @@
+.error_container {
+  background-image: url("../../Images/errorpage2.jpg");
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.error_prueba {
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2em;
+}
+
+.p_max {
+  font-size: 4em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.p_max_2 {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0;
+}
+
+@media screen and (max-width: 30em) {
+  .error_container {
+    background-size: 120% 100vh;
+    background-position: top;
+  }
+
+  .error_prueba {
+    font-size: 1em;
+  }
+
+  .p_max {
+    font-size: 3em;
+  }
+
+  .p_max_2 {
+    font-size: 2em;
+  }
+}
