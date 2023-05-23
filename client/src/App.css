@@ -1,7 +1,6 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
-  /* font-size: calc(12px + (18-14) * ((100vw - 300px) / (1400 - 300))); */
 }
 
 *,
