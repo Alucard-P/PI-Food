@@ -8,8 +8,10 @@ import NavBar from "./Components/NavBar/NavBar";
 import Error from "./Components/ErrorPage/Error";
 import About from "./Components/About/About";
 import axios from "axios";
-// axios.defaults.baseURL = "https://pi-food-production-8b61.up.railway.app/";
-axios.defaults.baseURL = "http://localhost:3001/";
+//Dominio para deploy del back
+axios.defaults.baseURL = "https://pi-food-production-8b61.up.railway.app/";
+//Dominio para trabajar desde localhost
+// axios.defaults.baseURL = "http://localhost:3001/";
 
 function App() {
   const location = useLocation();

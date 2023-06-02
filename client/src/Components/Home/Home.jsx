@@ -22,7 +22,6 @@ const Home = () => {
   }, [dispatch]);
   const recipes = useSelector((state) => state.recipes);
   const max = Math.ceil(recipes.length / perPage);
-  console.log(max);
 
   const paginado = (number) => {
     setPage(number);
