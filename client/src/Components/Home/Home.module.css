@@ -78,7 +78,6 @@
 }
 @media screen and (max-width: 30em) {
   .container_all {
-    /* top: 20vh; */
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(6, auto);
     justify-content: center;
