@@ -46,18 +46,86 @@ const Pagination = ({ page, setPage, max, paginado }) => {
       <ul className={style.list_ul}>
         {numberPage &&
           numberPage.map((e, index) => (
-            <li
-              key={e}
+            <button
+              onClick={() => paginado(e)}
               className={index === page - 1 ? style.active : style.disable_li}
             >
-              <a onClick={() => paginado(e)}>{e}</a>
-            </li>
+              {e}
+            </button>
           ))}
       </ul>
+      <ul className={style.prueba_1}>
+        {numberPage &&
+          numberPage.map((e, index) => {
+            if (page < 7) {
+              if (e <= 6) {
+                return (
+                  <button
+                    onClick={() => paginado(e)}
+                    className={
+                      index === page - 1 ? style.active : style.disable_li
+                    }
+                  >
+                    {e}
+                  </button>
+                );
+              } else if (e === 7) {
+                return (
+                  <>
+                    <span className={style.dot}>...</span>
+                  </>
+                );
+              } else if (e === max) {
+                return (
+                  <button
+                    onClick={() => paginado(e)}
+                    className={
+                      index === page - 1 ? style.active : style.disable_li
+                    }
+                  >
+                    {e}
+                  </button>
+                );
+              }
+            } else if (page >= 7) {
+              if (e === 1) {
+                return (
+                  <button
+                    onClick={() => paginado(e)}
+                    className={
+                      index === page - 1 ? style.active : style.disable_li
+                    }
+                  >
+                    {e}
+                  </button>
+                );
+              } else if (e === 2) {
+                return (
+                  <>
+                    <span className={style.dot}>...</span>
+                  </>
+                );
+              } else if (e >= 7) {
+                return (
+                  <button
+                    onClick={() => paginado(e)}
+                    className={
+                      index === page - 1 ? style.active : style.disable_li
+                    }
+                  >
+                    {e}
+                  </button>
+                );
+              }
+            }
+            return null;
+          })}
+      </ul>
+
       <button
         title="nextPage"
         onClick={nextPage}
-        className={style.pagination_button}
+        className={`${style.pagination_button} ${style.probando}`}
         disabled={page === max}
       >
         {">"}

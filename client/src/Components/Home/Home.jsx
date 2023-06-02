@@ -9,6 +9,7 @@ import Pagination from "../Pagination/Pagination";
 import Filters from "../Filters/Filters";
 import SearchBar from "../SearchBar/SearchBar";
 import Loading from "../Loading/Loading";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
   const [page, setPage] = useState(1);
@@ -66,6 +67,9 @@ const Home = () => {
               </div>
             );
           })}
+      </div>
+      <div className={style.grid_footer}>
+        <Footer />
       </div>
     </div>
   );

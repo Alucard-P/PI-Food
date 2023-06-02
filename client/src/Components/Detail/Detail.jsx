@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getDetail, resetDetail } from "../../redux/actions";
 import NavBar from "../NavBar/NavBar";
 import Loading from "../Loading/Loading";
+import Footer from "../Footer/Footer";
 
 const Detail = () => {
   const { id } = useParams();
@@ -29,39 +30,41 @@ const Detail = () => {
     <Loading />
   ) : (
     <>
-      <NavBar />
       <div className={style.detail_container_All}>
-        <div className={style.detail_container}>
-          <div className={style.detail_recipe}>
-            <button className={style.detail_button} onClick={onClick}>
-              Go Home
-            </button>
-            <p>
-              <b>Name:</b> {detail.name}
-            </p>
-            <p>
-              <b>HealthScore:</b> {detail.healthScore}
-            </p>
-            <p>
-              <b>Type of Diets:</b>{" "}
-              {detail.typeofdiets && detail.typeofdiets.join(", ")}{" "}
-            </p>
-            <span>
-              <b>Summary: </b>
-            </span>
-            <p
-              className={style.detail_text}
-              dangerouslySetInnerHTML={{ __html: detail.summary }}
-            />
-          </div>
-          <div className={style.detail_container_img}>
-            <img
-              className={style.detail_img}
-              src={detail.image ? detail.image : "https://cutt.ly/b2FeLSa"}
-              alt={detail.name}
-            />
-          </div>
+        <div className={style.grid_nav}>
+          <NavBar />
         </div>
+        {/* <div className={style.detail_container}> */}
+        <div className={style.detail_recipe}>
+          <button className={style.detail_button} onClick={onClick}>
+            Go Home
+          </button>
+          <p>
+            <b>Name:</b> {detail.name}
+          </p>
+          <p>
+            <b>HealthScore:</b> {detail.healthScore}
+          </p>
+          <p>
+            <b>Type of Diets:</b>{" "}
+            {detail.typeofdiets && detail.typeofdiets.join(", ")}{" "}
+          </p>
+          <span>
+            <b>Summary: </b>
+          </span>
+          <p
+            className={style.detail_text}
+            dangerouslySetInnerHTML={{ __html: detail.summary }}
+          />
+        </div>
+        <div className={style.detail_container_img}>
+          <img
+            className={style.detail_img}
+            src={detail.image ? detail.image : "https://cutt.ly/b2FeLSa"}
+            alt={detail.name}
+          />
+        </div>
+        {/* </div> */}
         <div className={style.detail_container_step}>
           <span className={style.detail_step_title}>
             <b>Steps: </b>
@@ -74,6 +77,9 @@ const Detail = () => {
                 : "This recipe has no preparation steps",
             }}
           />
+        </div>
+        <div className={style.grid_footer}>
+          <Footer />
         </div>
       </div>
     </>

@@ -1,38 +1,54 @@
 .form_container {
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  position: absolute;
-  top: 10vh;
-  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(1, auto 1fr auto);
+  grid-template-areas:
+    "nav    "
+    "form   "
+    "footer ";
 }
 .form_create {
+  grid-area: form;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: rgba(110, 128, 221, 0.4);
   width: 80%;
-  height: 85%;
+  padding: 2em 0;
+  margin: 2em auto;
   color: rgb(219, 218, 215);
+  min-width: 30em;
+}
+
+.grid_nav {
+  grid-area: nav;
+}
+
+.grid_footer {
+  grid-area: footer;
 }
 
 .form_document {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   text-align: center;
   width: 100%;
   border-radius: 0.6rem;
   color: black;
   justify-content: center;
+  /* border: 1px red solid; */
 }
 
 .form_img {
-  width: 312px;
+  /* width: 312px;
   height: 231px;
-  margin: 20px;
+  margin: 20px; */
+  max-width: 312px;
+  width: 100%;
+  height: auto;
+  margin: 1em;
 }
 
 .form_home {
@@ -113,6 +129,7 @@
 .form_input {
   height: 25px;
   margin: 5px;
+  width: 310px;
 }
 
 .form_input_number {
@@ -124,6 +141,7 @@
 .form_input_textarea {
   height: 15%;
   margin: 5px;
+  width: 310px;
 }
 
 .form_error {
@@ -142,6 +160,7 @@
   justify-content: center;
   align-content: center;
   align-items: center;
+  margin-top: 1em;
 }
 
 .form_card_name {
@@ -149,4 +168,24 @@
   display: flex;
   flex-wrap: wrap;
   margin: 10px;
+}
+
+@media screen and (max-width: 64em) {
+  .form_create {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  /* .form_create {
+    width: 80%;
+  } */
+}
+
+@media screen and (max-width: 30em) {
+  .form_create {
+    width: 100%;
+  }
 }
