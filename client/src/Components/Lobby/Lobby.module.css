@@ -26,11 +26,17 @@
   background-color: rgb(40, 40, 36);
   font-size: 2em;
   color: rgb(219, 218, 215);
-  /* border-color: blue; */
   border-radius: 24px;
 }
 
 .lobby_button:hover {
   color: red;
   background-color: rgb(40, 40, 36);
+}
+
+@media screen and (max-width: 48em) {
+  .lobby_text {
+    color: beige;
+    font-size: 3em;
+  }
 }
